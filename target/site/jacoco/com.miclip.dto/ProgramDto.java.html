@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>ProgramDto.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">otaki</a> &gt; <a href="index.source.html" class="el_package">com.miclip.dto</a> &gt; <span class="el_source">ProgramDto.java</span></div><h1>ProgramDto.java</h1><pre class="source lang-java linenums">package com.miclip.dto;
+
+import java.util.Date;
+import java.util.List;
+
+<span class="fc" id="L6">public class ProgramDto  {</span>
+
+    private String name;
+    private String code;
+    private List&lt;InstructorDto&gt; instructors;
+    private Date startDate;
+    private List&lt;ScheduleDto&gt; schedules;
+    private List&lt;SessionDto&gt; sessions;
+    private int duration;
+    private int studentCapacity;
+    private String location;
+    private String description;
+
+    public String getDescription() {
+<span class="fc" id="L20">        return description;</span>
+    }
+
+    public void setDescription(String description) {
+<span class="fc" id="L24">        this.description = description;</span>
+<span class="fc" id="L25">    }</span>
+
+    public String getName() {
+<span class="fc" id="L28">        return name;</span>
+    }
+
+    public List&lt;SessionDto&gt; getSessions() {
+<span class="fc" id="L32">        return sessions;</span>
+    }
+
+    public void setSessions(List&lt;SessionDto&gt; sessions) {
+<span class="fc" id="L36">        this.sessions = sessions;</span>
+<span class="fc" id="L37">    }</span>
+
+    public void setName(String name) {
+<span class="fc" id="L40">        this.name = name;</span>
+<span class="fc" id="L41">    }</span>
+
+    public List&lt;InstructorDto&gt; getInstructors() {
+<span class="fc" id="L44">        return instructors;</span>
+    }
+
+    public void setInstructors(List&lt;InstructorDto&gt; instructors) {
+<span class="fc" id="L48">        this.instructors = instructors;</span>
+<span class="fc" id="L49">    }</span>
+
+    public Date getStartDate() {
+<span class="fc" id="L52">        return startDate;</span>
+    }
+
+    public void setStartDate(Date startDate) {
+<span class="fc" id="L56">        this.startDate = startDate;</span>
+<span class="fc" id="L57">    }</span>
+
+    public List&lt;ScheduleDto&gt; getSchedules() {
+<span class="fc" id="L60">        return schedules;</span>
+    }
+
+    public void setSchedules(List&lt;ScheduleDto&gt; schedules) {
+<span class="fc" id="L64">        this.schedules = schedules;</span>
+<span class="fc" id="L65">    }</span>
+
+    public int getDuration() {
+<span class="fc" id="L68">        return duration;</span>
+    }
+
+    public void setDuration(int duration) {
+<span class="fc" id="L72">        this.duration = duration;</span>
+<span class="fc" id="L73">    }</span>
+
+    public int getStudentCapacity() {
+<span class="fc" id="L76">        return studentCapacity;</span>
+    }
+
+    public void setStudentCapacity(int studentCapacity) {
+<span class="fc" id="L80">        this.studentCapacity = studentCapacity;</span>
+<span class="fc" id="L81">    }</span>
+
+    public String getLocation() {
+<span class="fc" id="L84">        return location;</span>
+    }
+
+    public void setLocation(String location) {
+<span class="fc" id="L88">        this.location = location;</span>
+<span class="fc" id="L89">    }</span>
+
+
+    public String getCode() {
+<span class="fc" id="L93">        return code;</span>
+    }
+
+    public void setCode(String code) {
+<span class="fc" id="L97">        this.code = code;</span>
+<span class="fc" id="L98">    }</span>
+
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.7.9.201702052155</span></div></body></html>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>ProgramAssembler.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">otaki</a> &gt; <a href="index.source.html" class="el_package">com.miclip.assembler</a> &gt; <span class="el_source">ProgramAssembler.java</span></div><h1>ProgramAssembler.java</h1><pre class="source lang-java linenums">package com.miclip.assembler;
+
+import com.miclip.dto.ProgramDto;
+import com.miclip.entity.Program;
+
+import java.util.*;
+
+<span class="nc" id="L8">public class ProgramAssembler {</span>
+    public static ProgramDto WriteDto(Program program) {
+
+<span class="fc bfc" id="L11" title="All 2 branches covered.">        if (program == null) {</span>
+<span class="fc" id="L12">            return null;</span>
+        }
+
+<span class="fc" id="L15">        ProgramDto programDto = new ProgramDto();</span>
+<span class="fc" id="L16">        programDto.setName(program.getName());</span>
+<span class="fc" id="L17">        programDto.setCode(program.getCode());</span>
+<span class="fc" id="L18">        programDto.setStartDate(program.getStartDate());</span>
+<span class="fc" id="L19">        programDto.setDuration(program.getDuration());</span>
+<span class="fc" id="L20">        programDto.setStudentCapacity(program.getStudentCapacity());</span>
+<span class="fc" id="L21">        programDto.setLocation(program.getLocation());</span>
+<span class="fc" id="L22">        programDto.setDescription(program.getDescription());</span>
+
+<span class="fc" id="L24">        programDto.setInstructors(InstructorAssembler.WriteDto(program.getInstructors()));</span>
+<span class="fc" id="L25">        programDto.setSessions(SessionAssembler.WriteDto(program.getSessions()));</span>
+<span class="fc" id="L26">        programDto.setSchedules(ScheduleAssembler.WriteDto(program.getSchedules()));</span>
+<span class="fc" id="L27">        return programDto;</span>
+    }
+    
+    public static List&lt;ProgramDto&gt; WriteDto(List&lt;Program&gt; programs) {
+
+<span class="fc bfc" id="L32" title="All 2 branches covered.">        if (programs == null) {</span>
+<span class="fc" id="L33">            return null;</span>
+        }
+
+<span class="fc" id="L36">        List&lt;ProgramDto&gt; programDtos = new ArrayList&lt;&gt;();</span>
+
+<span class="fc bfc" id="L38" title="All 2 branches covered.">        for (Program program : programs) {</span>
+<span class="fc" id="L39">            programDtos.add(WriteDto(program));</span>
+<span class="fc" id="L40">        }</span>
+
+<span class="fc" id="L42">        return programDtos;</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.7.9.201702052155</span></div></body></html>

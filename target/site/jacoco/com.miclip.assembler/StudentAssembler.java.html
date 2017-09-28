@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>StudentAssembler.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">otaki</a> &gt; <a href="index.source.html" class="el_package">com.miclip.assembler</a> &gt; <span class="el_source">StudentAssembler.java</span></div><h1>StudentAssembler.java</h1><pre class="source lang-java linenums">package com.miclip.assembler;
+
+import com.miclip.dto.StudentDto;
+import com.miclip.entity.Student;
+
+import java.util.ArrayList;
+import java.util.List;
+
+<span class="nc" id="L9">public class StudentAssembler {</span>
+    public static StudentDto WriteDto(Student student){
+
+<span class="fc bfc" id="L12" title="All 2 branches covered.">        if(student == null){</span>
+<span class="fc" id="L13">            return null;</span>
+        }
+
+<span class="fc" id="L16">        StudentDto studentDto = new StudentDto();</span>
+<span class="fc" id="L17">        studentDto.setBirthDate(student.getBirthDate());</span>
+<span class="fc" id="L18">        studentDto.setAgreedTerms(student.isAgreedTerms());</span>
+<span class="fc" id="L19">        studentDto.setName(student.getName());</span>
+<span class="fc" id="L20">        studentDto.setWaived(student.isWaived());</span>
+<span class="fc" id="L21">        studentDto.setJoinedDate(student.getJoinedDate());</span>
+<span class="fc" id="L22">        return studentDto;</span>
+    }
+
+    public static List&lt;StudentDto&gt; WriteDto(List&lt;Student&gt; students) {
+
+<span class="fc bfc" id="L27" title="All 2 branches covered.">        if(students == null){</span>
+<span class="fc" id="L28">            return null;</span>
+        }
+
+<span class="fc" id="L31">        List&lt;StudentDto&gt; studentDtos = new ArrayList&lt;&gt;();</span>
+
+<span class="fc bfc" id="L33" title="All 2 branches covered.">        for (Student student : students) {</span>
+<span class="fc" id="L34">            studentDtos.add(WriteDto(student));</span>
+<span class="fc" id="L35">        }</span>
+
+<span class="fc" id="L37">        return studentDtos;</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.7.9.201702052155</span></div></body></html>
