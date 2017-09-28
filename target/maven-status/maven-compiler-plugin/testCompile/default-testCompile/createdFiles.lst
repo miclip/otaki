@@ -1,0 +1,5 @@
+com/miclip/assembler/ProgramAssemblerTest.class
+com/miclip/assembler/InstructorAssemblerTest.class
+com/miclip/assembler/StudentAssemblerTest.class
+com/miclip/assembler/ScheduleAssemblerTest.class
+com/miclip/assembler/SessionAssemblerTest.class
