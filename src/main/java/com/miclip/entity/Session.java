@@ -13,6 +13,18 @@ public class Session extends Identity {
     private String location;
     private List<Student> students;
 
+    public Session(){
+
+    }
+
+    public Session(String code, Date startDateTime, int duration, int studentCapacity, String location) {
+        this.code = code;
+        this.startDateTime = startDateTime;
+        this.duration = duration;
+        this.studentCapacity = studentCapacity;
+        this.location = location;
+    }
+
     public List<Instructor> getInstructors() {
         return instructors;
     }

@@ -10,6 +10,17 @@ public class Schedule  extends Identity{
     private int[] month;
     private int[] year;
 
+    public Schedule()
+    {}
+
+    public Schedule(String name, String startTime, int[] dayOfWeek, int[] month, int[] year) {
+        this.name = name;
+        this.startTime = startTime;
+        this.dayOfWeek = dayOfWeek;
+        this.month = month;
+        this.year = year;
+    }
+
     public String getName() {
         return name;
     }

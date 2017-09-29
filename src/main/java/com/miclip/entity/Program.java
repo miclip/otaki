@@ -16,6 +16,20 @@ public class Program extends Identity {
     private String location;
     private String description;
 
+    public Program (){
+
+    }
+
+    public Program(String name, String code, Date startDate, int duration, int studentCapacity, String location, String description) {
+        this.name = name;
+        this.code = code;
+        this.startDate = startDate;
+        this.duration = duration;
+        this.studentCapacity = studentCapacity;
+        this.location = location;
+        this.description = description;
+    }
+
     public String getDescription() {
         return description;
     }
