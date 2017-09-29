@@ -11,6 +11,17 @@ public class Student extends Identity {
     private boolean waived;
     private boolean agreedTerms;
 
+    public Student(){
+
+    }
+
+    public Student(String name, Date joinedDate, Date birthDate, boolean waived, boolean agreedTerms) {
+        this.name = name;
+        this.joinedDate = joinedDate;
+        this.birthDate = birthDate;
+        this.waived = waived;
+        this.agreedTerms = agreedTerms;
+    }
 
     public String getName() {
         return name;
